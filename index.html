@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPL UPI 25</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+        --color-primary: #5e17eb;
+        --color-second: #004aad;
+        --color-third: #2186c1;
+        --color-kuning: #ffbd59;
+        --color-ungu: #8c52ff;
+      }
+    </style>
+    <meta
+      name="description"
+      content="Website para mahasiswa prodi Rekayasa Perangkat Lunak UPI Cibiru"
+    />
+    <meta
+      name="keywords"
+      content="Rekayasa, Perangkat, Lunak, Mahasiswa, UPI, Cibiru"
+    />
+    <meta name="author" content="Mahasiswa RPL 25 UPI Cibiru" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- Open Graph (untuk preview saat dibagikan di Facebook, LinkedIn, dll) -->
+    <meta property="og:title" content="RPL UPI 25" />
+    <meta
+      property="og:description"
+      content="Website Mahasiswa RPL UPI Angkatan 25"
+    />
+    <meta property="og:image" content="/favicon.ico" />
+    <meta property="og:url" content="https://.com/" />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <!-- navigasi -->
+    <nav
+      class="top-0 right-0 left-0 z-20 fixed flex flex-row-reverse bg-primary drop-shadow-md backdrop-blur-2xl p-5 transition-all"
+    >
+      <button
+        data-collapse-toggle="navbar-default"
+        type="button"
+        class="md:hidden inline-flex justify-center items-center hover:bg-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 w-10 h-10 text-gray-200 text-sm"
+        aria-controls="navbar-default"
+        aria-expanded="false"
+        id="navbar-toggle"
+      >
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="w-5 h-5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 17 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 1h15M1 7h15M1 13h15"
+          />
+        </svg>
+      </button>
+      <ul class="hidden md:flex gap-5 font-semibold text-gray-100">
+        <!-- list navigasi -->
+        <li>
+          <a href="#about" class="hover:text-white active:text-white"
+            >About Us</a
+          >
+        </li>
+        <li>
+          <a href="#member" class="hover:text-white active:text-white"
+            >Member</a
+          >
+        </li>
+        <li>
+          <a href="#contact" class="hover:text-white active:text-white"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <div
+      id="overlay-nav"
+      class="hidden top-0 bottom-0 z-10 fixed bg-slate-50/5 backdrop-blur-sm w-full"
+    >
+      <div
+        class="top-24 right-4 z-10 fixed bg-slate-50 shadow-lg p-6 rounded-xl ring-2 w-44"
+      >
+        <ul class="flex flex-col gap-3 text-gray-900">
+          <!-- list navigasi -->
+          <li>
+            <a href="#about" class="hover:text-gray-600 active:text-gray-600"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a href="#member" class="hover:text-gray-600 active:text-gray-600"
+              >Member</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="hover:text-gray-600 active:text-gray-600"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <main class="pt-20">
+      <!-- header awal -->
+      <header
+        class="flex md:flex-row flex-col-reverse md:justify-between items-center gap-8 mx-auto px-5 max-w-[1200px] container"
+      >
+        <!-- flex kiri -->
+        <div>
+          <h1 class="mb-4 font-bold text-3xl md:text-4xl">
+            Software Engineering
+          </h1>
+          <p class="mb-5 text-lg">
+            Ini adalah website dari prodi Rekayasa Perangkat Lunak UPI. Mari
+            cari tahu lebih lanjut!
+          </p>
+          <a
+            href="#about"
+            class="inline-block bg-primary drop-shadow-md px-3 py-1 rounded-md font-semibold text-white"
+            >Explore More!</a
+          >
+        </div>
+        <!-- flex kanan -->
+        <div>
+          <!-- cover image -->
+          <div
+            class="rounded-full size-[70vw] min-[600px]:size-[400px] md:size-[450px] overflow-hidden"
+          >
+            <!-- image logo -->
+            <img
+              src="public/image/logo-rpl.png"
+              alt="logo rpl"
+              aria-label="logo-rpl"
+              class="w-full"
+            />
+          </div>
+        </div>
+      </header>
+      <!-- section tentang -->
+      <section id="about">
+        <div class="bg-gradient-to-b from-slate-50/5 to-second h-28"></div>
+        <div class="bg-second p-5 text-white">
+          <div
+            class="flex min-[700px]:flex-row flex-col items-center min-[700px]:items-start gap-5 mx-auto max-w-[1200px] container"
+          >
+            <!-- flex kiri -->
+            <div class="flex-1">
+              <!-- gambar slide dari kiri -->
+              <img
+                src="public/image/logo-rpl.png"
+                class="mx-auto rounded-sm w-full max-w-[400px]"
+                alt="logo-rpl"
+              />
+            </div>
+            <!-- flex kanan -->
+            <div class="flex-1">
+              <!-- text reveal -->
+              <h2
+                class="mb-3 font-semibold text-3xl min-[700px]:text-left text-center"
+              >
+                About Us
+              </h2>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque
+                quas sed totam ut dolor dignissimos asperiores consequuntur
+                quasi numquam! Dolore!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section member -->
+      <section id="member">
+        <div class="bg-gradient-to-b from-second to-third h-28"></div>
+        <div class="bg-third text-shadow-lg p-5 text-white">
+          <h2 class="mb-4 font-semibold text-3xl text-center">Member</h2>
+          <!-- division flex -->
+          <div
+            id="member-card"
+            class="flex flex-wrap justify-center gap-5 mx-auto max-w-[1200px] container"
+          >
+            <!-- tampilan card -->
+          </div>
+        </div>
+      </section>
+      <!-- section contact -->
+      <section id="contact">
+        <div class="bg-gradient-to-b from-third to-second h-28"></div>
+        <div class="bg-second px-5 py-20">
+          <h2 class="mb-4 font-semibold text-white text-3xl text-center">
+            Know Us More
+          </h2>
+          <div
+            class="flex min-[700px]:flex-row flex-col items-center gap-6 mx-auto max-w-[1200px] container"
+          >
+            <!-- flex kiri -->
+            <div class="flex-1">
+              <!-- instagram -->
+              <div
+                class="mx-auto rounded-xl w-2/3 min-[700px]:w-full md:w-[350px] overflow-hidden"
+              >
+                <img src="public/image/himarpl.jpeg" class="w-full" alt="" />
+              </div>
+            </div>
+            <!-- flex kanan -->
+            <div class="flex-1">
+              <!-- link to -->
+              <div
+                class="bg-ungu shadow-lg mx-auto p-5 md:p-10 rounded-xl w-full min-[500px]:w-2/3 min-[700px]:w-full lg:w-[600px] text-white"
+              >
+                <h3 class="mb-5 font-semibold text-xl">RPL 25</h3>
+                <p class="text-sm md:text-base">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
+                  reiciendis aspernatur facilis asperiores a ratione.
+                </p>
+                <a
+                  href="https://instagram.com/remaja_masjid_cibiru"
+                  target="_blank"
+                  class="inline-block bg-white mt-14 p-2 rounded-xl size-12"
+                >
+                  <img src="public/image/instagram.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-slate-800">
+      <div
+        class="flex justify-between mx-auto p-6 max-w-[1200px] text-slate-300 container"
+      >
+        <div>
+          <h3 class="font-semibold text-xl">
+            Software Engineering <br />25th Generation
+          </h3>
+        </div>
+        <div>
+          <ul class="text-right">
+            <li>
+              <a href="#about" class="hover:text-white active:text-white"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a href="#member" class="hover:text-white active:text-white"
+                >Member</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="hover:text-white active:text-white"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mx-auto">
+        <p class="text-slate-400 text-sm text-center">
+          Copyright 2025 | Rekayasa Perangkat Lunak UPI Cibiru
+        </p>
+      </div>
+    </footer>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
