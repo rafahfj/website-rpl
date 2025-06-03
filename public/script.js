@@ -1,5 +1,5 @@
-import { card } from "./public/js/card.js";
-import { data } from "./public/js/member.js";
+import { card } from "./js/card.js";
+import { data } from "./js/member.js";
 
 // card
 const memCard = document.querySelector("#member-card");
