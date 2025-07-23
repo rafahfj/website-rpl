@@ -59,3 +59,4 @@ const hideNavbar = () => {
 };
 
 ovlayNav.addEventListener("click", hideNavbar);
+
