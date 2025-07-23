@@ -98,3 +98,83 @@ const hideNavbar = () => {
 };
 
 ovlayNav.addEventListener("click", hideNavbar);
+
+// Modal functionality
+const modal = document.getElementById('member-modal');
+const modalBackdrop = document.getElementById('modal-backdrop');
+const modalContent = document.getElementById('modal-content');
+const modalImage = document.getElementById('modal-image');
+const modalName = document.getElementById('modal-name');
+const modalIg = document.getElementById('modal-ig');
+const igUsername = document.getElementById('ig-username');
+const closeModal = document.getElementById('close-modal');
+
+const showModal = (index) => {
+  const member = data[index];
+  modalImage.src = `image/member/${member.src}.jpg`;
+  modalName.textContent = member.nama;
+  
+  if (member.ig) {
+    igUsername.textContent = `@${member.ig}`;
+    modalIg.href = `https://instagram.com/${member.ig}`;
+    modalIg.classList.remove('hidden');
+  } else {
+    igUsername.textContent = 'No Instagram';
+    modalIg.href = '#';
+    modalIg.classList.add('opacity-50', 'cursor-default');
+  }
+  
+  // Get clicked card position
+  const card = document.querySelectorAll('#member-card > div')[index];
+  const cardRect = card.getBoundingClientRect();
+  
+  // Calculate transform origin (center of clicked card)
+  const originX = cardRect.left + cardRect.width/2;
+  const originY = cardRect.top + cardRect.height/2;
+  
+  // Set initial transform origin
+  modalContent.style.transformOrigin = `${originX}px ${originY}px`;
+  
+  // Show modal
+  modal.classList.remove('hidden');
+  
+  // Trigger animation in the next frame
+  requestAnimationFrame(() => {
+    modalBackdrop.classList.remove('bg-opacity-0');
+    modalBackdrop.classList.add('bg-opacity-75');
+    
+    modalContent.classList.remove('scale-95', 'opacity-0');
+    modalContent.classList.add('scale-100', 'opacity-100');
+  });
+};
+
+const hideModal = () => {
+  modalBackdrop.classList.remove('bg-opacity-75');
+  modalBackdrop.classList.add('bg-opacity-0');
+  
+  modalContent.classList.remove('scale-100', 'opacity-100');
+  modalContent.classList.add('scale-95', 'opacity-0');
+  
+  setTimeout(() => {
+    modal.classList.add('hidden');
+    // Reset modal content position
+    modalContent.style.transformOrigin = 'center';
+  }, 300); // Match this with transition duration
+};
+
+// Add click event to all member cards
+document.querySelectorAll('#member-card > div').forEach((card, index) => {
+  card.addEventListener('click', () => showModal(index));
+  card.style.cursor = 'pointer'; // Add pointer cursor
+});
+
+// Close modal events
+closeModal.addEventListener('click', hideModal);
+modalBackdrop.addEventListener('click', hideModal);
+
+// Close modal with ESC key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    hideModal();
+  }
+});
