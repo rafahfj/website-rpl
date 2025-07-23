@@ -4,7 +4,7 @@ export const card = function (src, nama, ig) {
               class="relative shadow-lg rounded-2xl md:rounded-3xl w-40 md:w-56 max-w-sm overflow-hidden "
             >
               <img
-                src="image/member/${src}"
+                src="image/member/${src}.jpg"
                 class="w-full h-64 md:h-80 object-cover"
                 alt=""
               />
