@@ -57,42 +57,31 @@
   </head>
   <body>
     <!-- navigasi -->
-    <nav class="top-0 right-0 left-0 z-20 fixed flex flex-row-reverse bg-primary drop-shadow-md backdrop-blur-2xl p-5 transition-all">
-      <button data-collapse-toggle="navbar-default" type="button" class="md:hidden inline-flex justify-center items-center hover:bg-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 w-10 h-10 text-gray-200 text-sm" aria-controls="navbar-default" aria-expanded="false" id="navbar-toggle">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
-        </svg>
-      </button>
-      <ul class="hidden md:flex gap-5 font-semibold text-gray-100">
-        <!-- list navigasi -->
-        <li>
-          <a href="#about" class="hover:text-white active:text-white">About Us</a>
-        </li>
-        <li>
-          <a href="#member" class="hover:text-white active:text-white">Member</a>
-        </li>
-        <li>
-          <a href="#contact" class="hover:text-white active:text-white">Contact</a>
-        </li>
-      </ul>
-    </nav>
-    <div id="overlay-nav" class="hidden top-0 bottom-0 z-10 fixed bg-slate-50/5 backdrop-blur-sm w-full">
-      <div class="top-24 right-4 z-10 fixed bg-slate-50 shadow-lg p-6 rounded-xl ring-2 w-44">
-        <ul class="flex flex-col gap-3 text-gray-900">
-          <!-- list navigasi -->
-          <li>
-            <a href="#about" class="hover:text-gray-600 active:text-gray-600">About Us</a>
-          </li>
-          <li>
-            <a href="#member" class="hover:text-gray-600 active:text-gray-600">Member</a>
-          </li>
-          <li>
-            <a href="#contact" class="hover:text-gray-600 active:text-gray-600">Contact</a>
-          </li>
-        </ul>
+    <nav class="top-0 right-0 left-0 z-20 fixed flex items-center justify-between bg-primary drop-shadow-md backdrop-blur-2xl p-5 transition-all">
+      <!-- KIRI: LOGO -->
+      <div class="flex items-center gap-2">
+        <img src="image/logo-rpl.png" alt="Logo RPL" class="w-9 h-9 rounded-full" />
+        <span class="text-white font-semibold hidden sm:inline">RPL 25</span>
       </div>
-    </div>
+
+      <!-- KANAN: MENU DAN TOGGLE -->
+      <div class="flex items-center gap-5">
+        <!-- Menu Desktop -->
+        <ul class="hidden md:flex gap-5 font-semibold text-gray-100">
+          <li><a href="#about" class="hover:text-white active:text-white">About Us</a></li>
+          <li><a href="#member" class="hover:text-white active:text-white">Member</a></li>
+          <li><a href="#contact" class="hover:text-white active:text-white">Contact</a></li>
+        </ul>
+
+        <!-- Toggle Mobile -->
+        <button data-collapse-toggle="navbar-default" type="button" class="md:hidden inline-flex justify-center items-center hover:bg-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 w-10 h-10 text-gray-200 text-sm" aria-controls="navbar-default" aria-expanded="false" id="navbar-toggle">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+          </svg>
+        </button>
+      </div>
+    </nav>
     <main class="pt-20">
       <!-- header awal -->
       <header class="flex md:flex-row flex-col-reverse md:justify-between items-center gap-8 mx-auto px-5 max-w-[1200px] container">
@@ -100,7 +89,7 @@
         <div>
           <h1 class="mb-4 font-bold text-3xl md:text-4xl">Software Engineering</h1>
           <p class="mb-5 text-lg">Ini adalah website dari prodi Rekayasa Perangkat Lunak UPI. Mari cari tahu lebih lanjut!</p>
-          <a href="#about" class="inline-block bg-primary drop-shadow-md px-3 py-1 rounded-md font-semibold text-white">Explore More!</a>
+          <a href="#about" class="inline-block bg-primary drop-shadow-md px-3 py-3 rounded-md font-semibold text-white">Explore More!</a>
         </div>
         <!-- flex kanan -->
         <div>
@@ -176,7 +165,7 @@
               <!-- link to -->
               <div class="bg-ungu shadow-lg mx-auto p-5 md:p-10 rounded-xl w-full min-[500px]:w-2/3 min-[700px]:w-full lg:w-[600px] text-white">
                 <h3 class="mb-5 font-semibold text-xl">RPL 25</h3>
-                <p class="text-sm md:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut reiciendis aspernatur facilis asperiores a ratione.</p>
+                <p class="text-sm md:text-base">Follow our adventures on social media, and stay tuned for all our colorful stories.</p>
                 <a href="https://instagram.com/remaja_masjid_cibiru" target="_blank" class="inline-block bg-white mt-14 p-2 rounded-xl size-12">
                   <img src="image/instagram.png" alt="" />
                 </a>
@@ -186,27 +175,37 @@
         </div>
       </section>
     </main>
-    <footer class="bg-slate-800">
-      <div class="flex justify-between mx-auto p-6 max-w-[1200px] text-slate-300 container">
-        <div>
-          <h3 class="font-semibold text-xl">
-            Software Engineering
-            <br />
-            25th Generation
-          </h3>
+      <footer class="bg-slate-800 text-slate-300">
+        <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center md:items-start gap-6">
+          <!-- Kiri -->
+          <div class="text-center md:text-left">
+            <h3 class="font-semibold text-xl leading-tight">
+              Software Engineering<br />
+              25th Generation
+            </h3>
+          </div>
+
+          <!-- Kanan -->
+          <div class="text-center md:text-right">
+            <ul class="space-y-2">
+              <li>
+                <a href="#about" class="hover:text-white active:text-white">About Us</a>
+              </li>
+              <li>
+                <a href="#member" class="hover:text-white active:text-white">Member</a>
+              </li>
+              <li>
+                <a href="#contact" class="hover:text-white active:text-white">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <ul class="text-right">
-            <li>
-              <a href="#about" class="hover:text-white active:text-white">About Us</a>
-            </li>
-            <li>
-              <a href="#member" class="hover:text-white active:text-white">Member</a>
-            </li>
-            <li>
-              <a href="#contact" class="hover:text-white active:text-white">Contact</a>
-            </li>
-          </ul>
+
+        <!-- Copyright -->
+        <div class="px-6 pb-6">
+          <p class="text-slate-400 text-sm text-center">
+            &copy; 2025 | Rekayasa Perangkat Lunak UPI Cibiru
+          </p>
         </div>
       </div>
       
